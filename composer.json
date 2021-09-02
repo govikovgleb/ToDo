@@ -1,0 +1,19 @@
+{
+    "name": "minus/to-do",
+    "description": "test task",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gleb Novikov",
+            "email": "novikov.gleb.1204@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
