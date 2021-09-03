@@ -11,28 +11,21 @@
 <body>
 <header>
     <div class="d-flex flex-row align-items-center bg-white border-bottom">
-        <label for="login">Login</label>
-        <input id="login" class="form-control" type="text"/>
-        <label for="password">Password</label>
-        <input id="password" class="form-control" type="text"/>
-        <a class="btn btn-outline-primary sign-in" href="">Sign in</a>
+        <span><?=$user_name?></span>
+        <a class="btn btn-outline-primary sign-out" href="">Sign out</a>
     </div>
 </header>
 <script>
-    $('.sign-in').click(function (e){
+    $('.sign-out').click(function (e){
         e.preventDefault()
-        let login = $('#login').val()
-        let password = $('#password').val()
         $.ajax({
             url: '/index.php',
             method: 'post',
             dataType: 'html',
             data: {
-                login: login,
-                password: password,
+                logout: true,
             },
             success: function(data){
-                console.log(data)
                 $('body').html(data)
             }
         });

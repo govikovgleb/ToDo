@@ -18,6 +18,9 @@ class Model extends DB
                 case 'filter':
                     parent::setFilter($value);
                     break;
+                case 'order':
+                    parent::setOrder($value);
+                    break;
                 default:
                     throw new \Exception('No params getList');
             }
