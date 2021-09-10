@@ -1,17 +1,13 @@
 <?php
 namespace app\core;
+/**
+ * представление
+ */
 class View
 {
-    function printView($data = null)
+    function render(string $view, $data = null)
     {
-        $tasks = $data;
-        include 'app/views/task_list.php';
-    }
-
-    function printViewAdmin($data = null, $login = null)
-    {
-        $user_name = $login;
-        $tasks = $data;
-        include 'app/views/admin_task_list.php';
+        if (is_array($data)) extract($data);
+        include 'app/views/' . $view;
     }
 }

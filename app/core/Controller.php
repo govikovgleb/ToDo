@@ -6,12 +6,12 @@ class Controller
     public $view;
     function __construct()
     {
-
+        $this->model = new Model();
         $this->view = new View();
     }
 
     function action()
     {
-
+        //переопределяется в наследниках
     }
 }
